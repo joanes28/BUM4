@@ -98,7 +98,7 @@ public class ClientController {
             countryCodeArea.setText(competitions.get(index).getArea().countryCode);
             if (competitions.get(index).emblemUrl != null) {
                 BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
-                try (InputStream file = getClass().getResourceAsStream("/img/github.svg")) {
+                try (InputStream file = new URL(competitions.get(index).emblemUrl).openStream()) {
                     TranscoderInput transIn = new TranscoderInput(file);
                     try {
                         transcoder.transcode(transIn, null);
@@ -123,7 +123,7 @@ public class ClientController {
             countryCodeArea.setText(competitions.get(index).getArea().countryCode);
             if (competitions.get(index).emblemUrl != null) {
                 BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
-                try (InputStream file = getClass().getResourceAsStream("/img/github.svg")) {
+                try (InputStream file = new URL(competitions.get(index).emblemUrl).openStream()) {
                     TranscoderInput transIn = new TranscoderInput(file);
                     try {
                         transcoder.transcode(transIn, null);
@@ -155,7 +155,7 @@ public class ClientController {
             countryCodeArea.setText(competitions.get(index).getArea().countryCode);
             if (competitions.get(index).emblemUrl != null) {
                 BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
-                try (InputStream file = getClass().getResourceAsStream("/img/github.svg")) {
+                try (InputStream file = new URL(competitions.get(index).emblemUrl).openStream()) {
                     TranscoderInput transIn = new TranscoderInput(file);
                     try {
                         transcoder.transcode(transIn, null);
@@ -180,7 +180,7 @@ public class ClientController {
             countryCodeArea.setText(competitions.get(index).getArea().countryCode);
             if (competitions.get(index).emblemUrl != null) {
                 BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
-                try (InputStream file = getClass().getResourceAsStream("/img/github.svg")) {
+                try (InputStream file = new URL(competitions.get(index).emblemUrl).openStream()) {
                     TranscoderInput transIn = new TranscoderInput(file);
                     try {
                         transcoder.transcode(transIn, null);
