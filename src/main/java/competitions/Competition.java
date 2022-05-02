@@ -16,6 +16,15 @@ public class Competition {
         int id;
         String name;
         String countryCode;
+
+        @Override
+        public String toString() {
+            return "Area{" +
+                    "id=" + id +
+                    ", name='" + name + '\'' +
+                    ", countryCode='" + countryCode + '\'' +
+                    '}';
+        }
     }
 
     public class Season {

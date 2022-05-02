@@ -97,22 +97,25 @@ public class ClientController {
             areaNameArea.setText(competitions.get(index).getArea().name);
             countryCodeArea.setText(competitions.get(index).getArea().countryCode);
             if (competitions.get(index).emblemUrl != null) {
-                BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
-                try (InputStream file = new URL(competitions.get(index).emblemUrl).openStream()) {
-                    TranscoderInput transIn = new TranscoderInput(file);
-                    try {
-                        transcoder.transcode(transIn, null);
-                        Image img = SwingFXUtils.toFXImage(transcoder.getBufferedImage(), null);
-                        imageLbl.setImage(img);
-                    } catch (TranscoderException ex) {
-                        ex.printStackTrace();
+                if (competitions.get(index).emblemUrl.contains(".svg")) {
+                    BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
+                    try (InputStream file = new URL(competitions.get(index).emblemUrl).openStream()) {
+                        TranscoderInput transIn = new TranscoderInput(file);
+                        try {
+                            transcoder.transcode(transIn, null);
+                            Image img = SwingFXUtils.toFXImage(transcoder.getBufferedImage(), null);
+                            imageLbl.setImage(img);
+                        } catch (TranscoderException ex) {
+                            System.out.println("There was an error charging the image");
+                            //ex.printStackTrace();
+                        }
+                    } catch (IOException io) {
+                        io.printStackTrace();
                     }
+                }else {
+                    Image image = new Image(competitions.get(index).emblemUrl);
+                    imageLbl.setImage(image);
                 }
-                catch (IOException io) {
-                    io.printStackTrace();
-                }
-                Image image = new Image(competitions.get(index).emblemUrl);
-                imageLbl.setImage(image);
             }
         }else{
             index++;
@@ -122,22 +125,25 @@ public class ClientController {
             areaNameArea.setText(competitions.get(index).getArea().name);
             countryCodeArea.setText(competitions.get(index).getArea().countryCode);
             if (competitions.get(index).emblemUrl != null) {
-                BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
-                try (InputStream file = new URL(competitions.get(index).emblemUrl).openStream()) {
-                    TranscoderInput transIn = new TranscoderInput(file);
-                    try {
-                        transcoder.transcode(transIn, null);
-                        Image img = SwingFXUtils.toFXImage(transcoder.getBufferedImage(), null);
-                        imageLbl.setImage(img);
-                    } catch (TranscoderException ex) {
-                        ex.printStackTrace();
+                if (competitions.get(index).emblemUrl.contains(".svg")) {
+                    BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
+                    try (InputStream file = new URL(competitions.get(index).emblemUrl).openStream()) {
+                        TranscoderInput transIn = new TranscoderInput(file);
+                        try {
+                            transcoder.transcode(transIn, null);
+                            Image img = SwingFXUtils.toFXImage(transcoder.getBufferedImage(), null);
+                            imageLbl.setImage(img);
+                        } catch (TranscoderException ex) {
+                            System.out.println("There was an error charging the image");
+                            //ex.printStackTrace();
+                        }
+                    } catch (IOException io) {
+                        io.printStackTrace();
                     }
+                }else {
+                    Image image = new Image(competitions.get(index).emblemUrl);
+                    imageLbl.setImage(image);
                 }
-                catch (IOException io) {
-                    io.printStackTrace();
-                }
-                Image image = new Image(competitions.get(index).emblemUrl);
-                imageLbl.setImage(image);
             }
         }
     }
@@ -154,22 +160,25 @@ public class ClientController {
             areaNameArea.setText(competitions.get(index).getArea().name);
             countryCodeArea.setText(competitions.get(index).getArea().countryCode);
             if (competitions.get(index).emblemUrl != null) {
-                BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
-                try (InputStream file = new URL(competitions.get(index).emblemUrl).openStream()) {
-                    TranscoderInput transIn = new TranscoderInput(file);
-                    try {
-                        transcoder.transcode(transIn, null);
-                        Image img = SwingFXUtils.toFXImage(transcoder.getBufferedImage(), null);
-                        imageLbl.setImage(img);
-                    } catch (TranscoderException ex) {
-                        ex.printStackTrace();
+                if (competitions.get(index).emblemUrl.contains(".svg")) {
+                    BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
+                    try (InputStream file = new URL(competitions.get(index).emblemUrl).openStream()) {
+                        TranscoderInput transIn = new TranscoderInput(file);
+                        try {
+                            transcoder.transcode(transIn, null);
+                            Image img = SwingFXUtils.toFXImage(transcoder.getBufferedImage(), null);
+                            imageLbl.setImage(img);
+                        } catch (TranscoderException ex) {
+                            System.out.println("There was an error charging the image");
+                            //ex.printStackTrace();
+                        }
+                    } catch (IOException io) {
+                        io.printStackTrace();
                     }
+                }else {
+                    Image image = new Image(competitions.get(index).emblemUrl);
+                    imageLbl.setImage(image);
                 }
-                catch (IOException io) {
-                    io.printStackTrace();
-                }
-                Image image = new Image(competitions.get(index).emblemUrl);
-                imageLbl.setImage(image);
             }
         }else{
             index--;
@@ -179,22 +188,25 @@ public class ClientController {
             areaNameArea.setText(competitions.get(index).getArea().name);
             countryCodeArea.setText(competitions.get(index).getArea().countryCode);
             if (competitions.get(index).emblemUrl != null) {
-                BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
-                try (InputStream file = new URL(competitions.get(index).emblemUrl).openStream()) {
-                    TranscoderInput transIn = new TranscoderInput(file);
-                    try {
-                        transcoder.transcode(transIn, null);
-                        Image img = SwingFXUtils.toFXImage(transcoder.getBufferedImage(), null);
-                        imageLbl.setImage(img);
-                    } catch (TranscoderException ex) {
-                        ex.printStackTrace();
+                if (competitions.get(index).emblemUrl.contains(".svg")) {
+                    BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
+                    try (InputStream file = new URL(competitions.get(index).emblemUrl).openStream()) {
+                        TranscoderInput transIn = new TranscoderInput(file);
+                        try {
+                            transcoder.transcode(transIn, null);
+                            Image img = SwingFXUtils.toFXImage(transcoder.getBufferedImage(), null);
+                            imageLbl.setImage(img);
+                        } catch (TranscoderException ex) {
+                            System.out.println("There was an error charging the image");
+                            //ex.printStackTrace();
+                        }
+                    } catch (IOException io) {
+                        io.printStackTrace();
                     }
+                }else {
+                    Image image = new Image(competitions.get(index).emblemUrl);
+                    imageLbl.setImage(image);
                 }
-                catch (IOException io) {
-                    io.printStackTrace();
-                }
-                Image image = new Image(competitions.get(index).emblemUrl);
-                imageLbl.setImage(image);
             }
         }
     }
@@ -204,11 +216,11 @@ public class ClientController {
 
         initializeCompetition();
 
-        compIDArea.setText("" + competitions.get(0).getId());
-        compNameArea.setText(competitions.get(0).getName());
-        areaIDArea.setText("" + competitions.get(0).getArea().id);
-        areaNameArea.setText(competitions.get(0).getArea().name);
-        countryCodeArea.setText(competitions.get(0).getArea().countryCode);
+        compIDArea.setText("" + competitions.get(index).getId());
+        compNameArea.setText(competitions.get(index).getName());
+        areaIDArea.setText("" + competitions.get(index).getArea().id);
+        areaNameArea.setText(competitions.get(index).getArea().name);
+        countryCodeArea.setText(competitions.get(index).getArea().countryCode);
         if (competitions.get(0).emblemUrl != null) {
             BufferedImageTranscoder transcoder = new BufferedImageTranscoder();
             try (InputStream file = getClass().getResourceAsStream("/img/github.svg")) {
@@ -224,7 +236,7 @@ public class ClientController {
             catch (IOException io) {
                 io.printStackTrace();
             }
-            Image image = new Image(competitions.get(0).emblemUrl);
+            Image image = new Image(competitions.get(index).emblemUrl);
             imageLbl.setImage(image);
         }
 
